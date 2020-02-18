@@ -11,3 +11,7 @@ steps:
   inputs:
     version: '7.0.1'
     executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+- task: PublishTestResults@2
+  inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: '**/TEST-*.xml'
